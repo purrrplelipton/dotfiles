@@ -9,3 +9,13 @@
 # - Customize color input
 # - Create aliases (shortcuts for Git subcommands)
 # - Add and endpoint shortcuts for commonly used URLs
+[fetch]
+	prune = true
+[alias]
+	empty = git commit --allow-empty
+[alias]
+    delete-local-merged = "!git fetch && git branch --merged | egrep -v 'master' | xargs git branch -d"
+[init]
+    defaultBranch = main # (or whatever name you want)
+[status]
+    short = true
